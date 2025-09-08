@@ -1,18 +1,38 @@
-# Customer Churn Prediction (Task 2)  
-*Objective:* Build an ML model to predict customers likely to leave.
+# Customer Churn Prediction (Task 2)
 
-## Demo (dashboard)
-![Dashboard preview](Churn_PredictionDashboardreview.png)
+*Objective:* Build a machine learning model to predict which customers are likely to leave a service (churn), and present business insights via a dashboard.
 
-## Files
-- notebooks/churn_prediction.ipynb — Colab notebook (data → model → eval → predictions)  
-- data/churn_predictions_with_risk.csv — output with churn_prob & Risk_Level  
-- dashboard/Churn_Dashboard.pbix — Power BI file (or link in dashboard/dashboard_link.txt)  
-- Final_Report.pdf — Business recommendations
+## 🔗 Dataset
+- Telco Customer Churn (Kaggle) — WA_Fn-UseC_-Telco-Customer-Churn.csv by blastchar.  
+  Download: https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
-## How to reproduce
-1. Download Telco dataset from Kaggle: https://www.kaggle.com/datasets/blastchar/telco-customer-churn  
-2. Open notebooks/churn_prediction.ipynb in Colab and run cells top → bottom.  
-3. Export churn_predictions_with_risk.csv and open in Power BI to view the dashboard.<img width="1163" height="656" alt="Churn_Prediction Dashboard Preview" src="https://github.com/user-attachments/assets/afc4139a-5c53-4f39-942f-06a5866d059a" />
-# FUTURE_ML_02
-Churn Prediction System
+> Note: Original dataset not included in this repo due to licensing. Please download from Kaggle and place in data/ if you want to reproduce results.
+
+## 🔧 Tools & Libraries
+- Python (Pandas, Scikit-learn, XGBoost, Matplotlib, SHAP)  
+- Power BI (dashboard)  
+- Jupyter / Google Colab
+
+## 📁 Repository Structure
+
+Customer-Churn-Prediction-ML/ │── churn_prediction.ipynb         # Notebook: cleaning → modeling → evaluation │── churn_predictions_with_risk.csv # Final predictions with churn_prob and Risk_Level │── Dashboard_preview.png           # Screenshot of Power BI dashboard │── Final_Report.pdf                # Business recommendations (PDF) │── README.md │── data/ (optional: original dataset)
+
+## 🧭 What I did
+1. Cleaned and preprocessed the Telco dataset.  
+2. Trained models: Logistic Regression, Random Forest, XGBoost.  
+3. Evaluated models (Accuracy, Precision, Recall, F1, ROC-AUC).  
+4. Selected best model (Logistic Regression, AUC ≈ 0.86).  
+5. Predicted churn probabilities and created risk buckets (High/Medium/Low).  
+6. Built a Power BI dashboard presenting KPIs, churn drivers, and high-risk customers.  
+7. Prepared business recommendations to reduce churn.
+
+## 📌 How to reproduce
+1. Download the original dataset from Kaggle and place it in data/ (or update paths in the notebook).  
+2. Open churn_prediction.ipynb in Colab or Jupyter and run cells top → bottom.  
+3. Export churn_predictions_with_risk.csv and import into Power BI to view the dashboard.
+
+## 📬 Deliverables
+- churn_prediction.ipynb — Notebook with code and analysis.  
+- churn_predictions_with_risk.csv — Customer predictions with probabilities and risk levels.  
+- Dashboard_preview.png & Churn_Dashboard.pbix (if included) — Power BI dashboard.  
+- Final_Report.pdf — Business recommendations summary.
